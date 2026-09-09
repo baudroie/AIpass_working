@@ -1,0 +1,1 @@
+Preserve the shared LP components, approved typography, photos, logo, colors, seven FAQs and Google Forms URL. The audience is selected in pages.config.json. Build with npm run build and commit docs/ with source updates for GitHub Pages. Do not commit node_modules, environment files, local QA screenshots or conversation records.

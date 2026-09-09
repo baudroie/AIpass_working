@@ -1,0 +1,67 @@
+/* Worker-specific glyph metrics. Shared layout and student metrics stay unchanged. */
+[data-audience="worker"] .scene-heading p { white-space:pre-line; }
+/* Give each requested sentence its own full-width line below the scene title. */
+[data-audience="worker"] :is(.scene--1,.scene--3) .scene-heading {
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr);
+  column-gap:12px;
+  row-gap:4px;
+}
+[data-audience="worker"] :is(.scene--1,.scene--3) .scene-heading > div { display:contents; }
+[data-audience="worker"] :is(.scene--1,.scene--3) .scene-number { position:static; grid-column:1; grid-row:1; }
+[data-audience="worker"] :is(.scene--1,.scene--3) .scene-heading h3 { grid-column:2; grid-row:1; margin:0; }
+[data-audience="worker"] :is(.scene--1,.scene--3) .scene-heading p { grid-column:1/-1; grid-row:2; width:auto; margin:0; }
+@media (min-width:601px) {
+  [data-audience="worker"] .scene--1 { grid-template-columns:minmax(0,56fr) minmax(0,44fr); }
+}
+@media (max-width:600px) {
+  [data-audience="worker"] .scene--3 { padding-bottom:130px; }
+}
+/* This photo includes its own green background; fill the frame without the
+   student's inset and second background curve showing through at the edge. */
+[data-audience="worker"] .hero-visual::before { content:none; }
+[data-audience="worker"] .hero-visual .asset picture { width:100%; }
+[data-audience="worker"] .hero-visual img { object-fit:cover; object-position:center top; }
+@media (min-width:601px) {
+  [data-audience="worker"] .hero-visual { margin-top:-44px; }
+}
+[data-audience="worker"] [data-glyph="W01-L1-G03"] { --glyph-size:.86; --glyph-dy:1px; }
+[data-audience="worker"] [data-glyph="W01-L1-G05"],
+[data-audience="worker"] [data-glyph="W01-L1-G06"] { --glyph-size:.94; }
+[data-audience="worker"] [data-glyph="W01-L1-G07"] { --glyph-size:.8; --glyph-gap:-.16em; --glyph-dx:-1px; }
+[data-audience="worker"] [data-glyph="W01-L2-G01"] { --glyph-size:1.13; --glyph-gap:-.025em; --glyph-dy:2px; }
+[data-audience="worker"] [data-glyph="W01-L2-G02"] { --glyph-size:1.13; --glyph-gap:.025em; --glyph-dy:2px; }
+[data-audience="worker"] [data-glyph="W01-L2-G03"] { --glyph-size:.84; --glyph-gap:.01em; }
+[data-audience="worker"] [data-glyph="W01-L2-G06"] { --glyph-size:.9; --glyph-dy:2px; }
+[data-audience="worker"] [data-glyph="W01-L2-G07"] { --glyph-size:.76; --glyph-gap:-.19em; --glyph-dx:-1px; }
+/* The worker question has different punctuation positions from the student copy. */
+[data-audience="worker"] [data-glyph="C07-L2-G03"] { --glyph-size:1; --glyph-gap:0; }
+[data-audience="worker"] [data-glyph="C07-L2-G05"] { --glyph-size:.85; --glyph-gap:-.12em; }
+@media (max-width:1099px), (max-height:799px) {
+  [data-audience="worker"] [data-glyph="W01-L1-G03"] { --glyph-size:.87; --glyph-dy:0px; }
+  [data-audience="worker"] [data-glyph="W01-L1-G05"],
+  [data-audience="worker"] [data-glyph="W01-L1-G06"] { --glyph-size:.95; }
+  [data-audience="worker"] [data-glyph="W01-L1-G07"] { --glyph-size:.79; --glyph-gap:-.15em; }
+  [data-audience="worker"] [data-glyph="W01-L2-G01"] { --glyph-size:1.12; --glyph-dy:1px; }
+  [data-audience="worker"] [data-glyph="W01-L2-G02"] { --glyph-size:1.12; --glyph-gap:.018em; --glyph-dy:1px; }
+  [data-audience="worker"] [data-glyph="W01-L2-G06"] { --glyph-size:.89; --glyph-dy:1px; }
+  [data-audience="worker"] [data-glyph="W01-L2-G07"] { --glyph-size:.75; --glyph-gap:-.18em; --glyph-dx:0px; }
+}
+@media (max-width:600px) {
+  /* Keep the longer worker label on a clear background above the subjects. */
+  [data-audience="worker"] .hero-visual { margin-top:-28px; }
+}
+@media (min-width:1100px) and (min-height:800px) and (max-height:999px) {
+  /* The short split layout needs the complete subjects in a smaller right frame. */
+  [data-audience="worker"] .hero-visual { margin-top:-96px; }
+  [data-audience="worker"] .hero-visual img { object-fit:contain; object-position:right bottom; }
+}
+@media (min-width:1100px) and (max-width:1250px) and (min-height:800px) {
+  [data-audience="worker"] .document-step > span {
+    font-size:14px;
+    width:max-content;
+    min-width:100%;
+    left:50%;
+    transform:translateX(-50%);
+  }
+}
