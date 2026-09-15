@@ -447,6 +447,15 @@ function Final({ sectionRef }) {
       <a className="conditions-link" href="#application">
         お申し込みについて
       </a>
+      <div className="application-form" id="application-form">
+        <iframe
+          src={safeExternalUrl(config.applicationEmbedUrl)}
+          title="生成AIパスポート無料セミナーのお申し込みフォーム"
+          width="640"
+          height="1440"
+          loading="lazy"
+        />
+      </div>
       <footer>
         <p>© baudroie inc.</p>
       </footer>
