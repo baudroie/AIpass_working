@@ -15,10 +15,11 @@ import {
   Price,
 } from "./Typography.jsx";
 import { Arrow, Paper, BookArt, ResumeArt, StepIcon, CalendarArt } from "./Diagrams.jsx";
+import { ApplicationForm } from "./ApplicationForm.jsx";
 import "./typography.css";
 
 function CTA({
-  href = safeExternalUrl(config.applicationUrl),
+  href = "#application-form",
   children = copy.C05,
   id,
   disabled = false,
@@ -354,7 +355,6 @@ function ExamFlow() {
   );
 }
 function Application({ sectionRef }) {
-  const url = safeExternalUrl(config.applicationUrl);
   return (
     <section
       className="application section"
@@ -395,14 +395,9 @@ function Application({ sectionRef }) {
         <p>申込締切：{pending(config.deadline)}</p>
         <p>キャンセルの連絡方法：{pending(config.cancellation)}</p>
       </div>
-      <CTA id="A03" href={url} disabled={!url}>
+      <CTA id="A03">
         {copy.C27}
       </CTA>
-      {!url && (
-        <p className="application-status" id="application-status" tabIndex="-1">
-          申込先は確認中です。
-        </p>
-      )}
     </section>
   );
 }
@@ -433,13 +428,12 @@ function FAQ() {
   );
 }
 function Final({ sectionRef }) {
-  const url = safeExternalUrl(config.applicationUrl);
   return (
     <section className="final" id="final" ref={sectionRef}>
       <Heading id="C28" />
       <div className="final-actions">
         <div>
-          <CTA href={url} disabled={!url} id="A04">
+          <CTA id="A04">
             {copy.C27}
           </CTA>
         </div>
@@ -447,15 +441,7 @@ function Final({ sectionRef }) {
       <a className="conditions-link" href="#application">
         お申し込みについて
       </a>
-      <div className="application-form" id="application-form">
-        <iframe
-          src={safeExternalUrl(config.applicationEmbedUrl)}
-          title="生成AIパスポート無料セミナーのお申し込みフォーム"
-          width="640"
-          height="1440"
-          loading="lazy"
-        />
-      </div>
+      <ApplicationForm />
       <footer>
         <p>© baudroie inc.</p>
       </footer>
@@ -502,7 +488,7 @@ export function App() {
   }, []);
   return (
     <>
-      <a className="skip-link" href="#application">
+      <a className="skip-link" href="#application-form">
         無料セミナーのお申し込みへ
       </a>
       <main className="page">

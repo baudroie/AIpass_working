@@ -7,7 +7,7 @@ export const siteConfig = {
   organizer: null,
   contact: null,
   applicationUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfmHeKFsSde4tXAdVLzFp4nPdNFq9eaKArb_0coNbeBM6LZyw/viewform?usp=dialog",
-  applicationEmbedUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfmHeKFsSde4tXAdVLzFp4nPdNFq9eaKArb_0coNbeBM6LZyw/viewform?embedded=true",
+  applicationSubmitUrl: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfmHeKFsSde4tXAdVLzFp4nPdNFq9eaKArb_0coNbeBM6LZyw/formResponse?embedded=true",
   termsUrl: null,
   privacyUrl: null,
 };
