@@ -6,8 +6,8 @@ export const siteConfig = {
   cancellation: null,
   organizer: null,
   contact: null,
-  applicationUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfmHeKFsSde4tXAdVLzFp4nPdNFq9eaKArb_0coNbeBM6LZyw/viewform?usp=dialog",
-  applicationSubmitUrl: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfmHeKFsSde4tXAdVLzFp4nPdNFq9eaKArb_0coNbeBM6LZyw/formResponse?embedded=true",
+  scheduleFeedUrl: "https://script.google.com/macros/s/AKfycbxrE77qwllMzMj7d63LtS-0ulLgqfWw_zJpjZlCSyhhEdbDKZihWPzvXDuIPEsglAyT/exec",
+  enableProductionSubmission: true,
   termsUrl: null,
   privacyUrl: null,
 };

@@ -3,11 +3,6 @@ import { copy, faqs, typographyLines, beginnerLabel, imageAlts, documentLabels, 
 import { imageAssets } from "./assets.js";
 import { publicAsset } from "./publicAsset.js";
 import {
-  siteConfig as config,
-  pending,
-  safeExternalUrl,
-} from "./siteConfig.js";
-import {
   HeroTitle,
   HeroSubtitle,
   ConcernTitle,
@@ -368,7 +363,6 @@ function Application({ sectionRef }) {
         <Asset name="application-student" alt="申込内容を確認する学生" />
         <div className="application-guidance">
           <p>{copy.C27note}</p>
-          <p className="materials-fee">教材など参加に必要な費用：{pending(config.materialsFee)}</p>
         </div>
       </div>
       <div className="exam-fee">
@@ -377,7 +371,6 @@ function Application({ sectionRef }) {
           <strong>{copy.C26fee}</strong>
         </p>
         <p>{copy.C26feeNote}</p>
-        <p>受験料の補助・主催者負担：{pending(config.examFeeSupport)}</p>
         <Source />
       </div>
       <h3 className="participation-title">{copy.C26flow}</h3>
@@ -391,10 +384,6 @@ function Application({ sectionRef }) {
           </li>
         ))}
       </ol>
-      <div className="application-policy">
-        <p>申込締切：{pending(config.deadline)}</p>
-        <p>キャンセルの連絡方法：{pending(config.cancellation)}</p>
-      </div>
       <CTA id="A03">
         {copy.C27}
       </CTA>
